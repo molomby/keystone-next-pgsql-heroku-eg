@@ -5,19 +5,24 @@ You can deploy it to Heroku (for free!) using the button below, then navigate to
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/molomby/keystone-next-pgsql-heroku-eg)
 
-You can also clone this repo and run it locally:
+You can also clone this repo and run it locally.
 
-**TODO: Local dev instructions for PG**
+Instructions for MacOS:
 
 ```sh
+# Install postgres (if you don't have it already)
+# This will add a DB role matching your OS username
+brew install postgresql
+
 # Get the repo
 git clone https://github.com/molomby/keystone-next-pgsql-heroku-eg
 cd keystone-next-pgsql-heroku-eg
 
-# Install packages
+# Install node packages
 yarn
 
 # Start the app
+# A DB will be created automatically and migrated to the latest schema
 yarn dev
 ```
 
